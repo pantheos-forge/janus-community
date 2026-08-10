@@ -98,6 +98,14 @@ Three personas ship with this repository.
 bakes in the command-line tools the agent needs, and runs and validates it in
 there. `market_research` remains the path that works with nothing but an API key.
 
+Agents don't emit chat transcripts — they emit a structured deliverable that
+conforms to a schema you define, with its sources cited. Here a research agent
+built on Janus returns a market overview plus qualified, address-verified leads:
+
+<p align="center">
+  <img src="assets/deliverable.png" alt="A structured agent deliverable: a market overview with sizing, key trends and competitive landscape, followed by a table of qualified leads with descriptions and verified contact details, footed by a cited-source count" width="900">
+</p>
+
 ## Command map
 
 | Command | What it does |
