@@ -9,6 +9,21 @@ history, see the git log and the design specs under
 
 ## [Unreleased]
 
+### Fixed
+
+- **Containerized agents now read `.env`** — a container run built its
+  environment from the process environment only, so a provider configured in
+  `.env` (the setup path the README documents) never reached the container and
+  the agent exited with `No provider configured`, while host-side runs worked.
+  Provider values now fall back to the loaded config. (`f321f7f`)
+- **A failed containerized validate can be retried** — the `_export/` directory
+  left by a failed attempt made the next one raise `FileExistsError` as an
+  unhandled traceback, so the natural recovery (fix your config, run it again)
+  crashed. (`f321f7f`)
+- **`janus validate` explains a smoke failure** — it printed a bare
+  `smoke: FAIL` and discarded the detail it had already captured; failed checks
+  now report their name and detail. (`f321f7f`)
+
 ### Added
 
 - **Janus braille-art logo (SVG)** — a scalable, font-independent SVG of the TUI
