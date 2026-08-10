@@ -7,6 +7,10 @@ language. You tell it what expert agent you want; it interviews you, builds the
 agent, tests that the agent actually works, and hands you a self-contained,
 runnable repo.
 
+<p align="center">
+  <img src="assets/splash.png" alt="The Janus TUI splash screen: a braille-rendered janiform coin above the Janus wordmark" width="700">
+</p>
+
 ## The core idea
 
 Most agent builders hand you a blank canvas and a lot of glue code. Janus is an
@@ -23,6 +27,13 @@ harness.
 judge scoring its output against a rubric. If an agent can't meet its bar, Janus
 exports *nothing* and tells you why, with the scores. The validation fails
 closed — a broken or silent judge scores zero.
+
+One command, and you get the whole loop — scaffold, validate against the rubric,
+and export a standalone agent:
+
+<p align="center">
+  <img src="assets/factory-build.png" alt="The factory scaffolding an agent named themis, validating it to a passing mean score of 0.94, and exporting it to ~/janus-agents/themis" width="900">
+</p>
 
 Janus Core was extracted from a real, in-production proprietary pentesting agent.
 That domain was just the first agent built this way; the template proved itself
