@@ -1,0 +1,10 @@
+[persona]
+name = "minimal"
+description = "Test persona: sparse manifest with no [tools]/[output]/[workspace]/[provider]/[validation]"
+domain = "testing"
+
+[prompt]
+file = "prompt.md"
+
+[task]
+template = "Do the minimal thing about: {subject}"

@@ -1,0 +1,17 @@
+tasks = [
+  "https://github.com/pallets/click",
+]
+pass_threshold = 0.7
+mode = "all"
+
+[[criteria]]
+name = "coverage"
+description = "The brief covers the key aspects of the codebase: an executive summary, a language/size breakdown, concrete findings, and material risks."
+
+[[criteria]]
+name = "tool_grounding"
+description = "Findings and risks are backed by real tool output (scc, rg, or git) cited as evidence, not by unsupported assertions or fabricated-looking output."
+
+[[criteria]]
+name = "structure"
+description = "The brief is well-organized, internally consistent, and clearly written."

@@ -1,0 +1,26 @@
+[persona]
+name = "echo_brief"
+description = "Test persona: echoes and emits a brief"
+domain = "testing"
+
+[prompt]
+file = "prompt.md"
+
+[task]
+template = "Produce a brief about: {subject}"
+
+[tools]
+builtins = ["bash", "write_file", "update_plan"]
+custom = "tools:TOOLS"
+
+[output]
+schema_file = "output_schema.json"
+
+[workspace]
+subdirs = ["notes"]
+
+[provider]
+model = "claude-sonnet-5"
+
+[validation]
+rubric_file = "rubric.toml"

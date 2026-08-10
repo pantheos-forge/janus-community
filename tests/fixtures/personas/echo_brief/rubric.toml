@@ -1,0 +1,11 @@
+tasks = ["renewable energy storage", "EV charging in Europe"]
+pass_threshold = 0.7
+mode = "all"
+
+[[criteria]]
+name = "coverage"
+description = "Covers the key aspects of the topic"
+
+[[criteria]]
+name = "clarity"
+description = "The brief is clear and well-structured"

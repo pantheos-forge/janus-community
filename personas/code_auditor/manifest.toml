@@ -1,0 +1,19 @@
+[persona]
+name = "code_auditor"
+description = "Audits a codebase for size, language mix, and risk signals using CLI tools"
+domain = "software-audit"
+
+[prompt]
+file = "prompt.md"
+
+[tools]
+builtins = ["bash", "read_file", "write_file", "update_plan"]
+
+[task]
+template = "Audit the codebase at: {subject}"
+
+[output]
+schema_file = "output_schema.json"
+
+[validation]
+rubric_file = "rubric.toml"

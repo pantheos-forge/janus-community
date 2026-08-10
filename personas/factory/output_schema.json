@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {"type": "string", "enum": ["exported", "failed"]},
+    "agent": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "domain": {"type": "string"},
+        "description": {"type": "string"}
+      },
+      "required": ["name", "domain", "description"],
+      "additionalProperties": false
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "smoke_passed": {"type": "boolean"},
+          "judge_passed": {"type": "boolean"},
+          "scores": {"type": "object", "additionalProperties": {"type": "number"}},
+          "feedback_digest": {"type": "string"},
+          "changes_made": {"type": "string"}
+        },
+        "required": ["smoke_passed", "judge_passed", "scores", "feedback_digest", "changes_made"],
+        "additionalProperties": false
+      }
+    },
+    "export_path": {"type": "string"},
+    "how_to_run": {"type": "string"},
+    "diagnosis": {"type": "string"}
+  },
+  "required": ["status", "agent", "attempts"],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "exported"}}},
+      "then": {"required": ["export_path", "how_to_run"]}
+    },
+    {
+      "if": {"properties": {"status": {"const": "failed"}}},
+      "then": {"required": ["diagnosis"]}
+    }
+  ]
+}

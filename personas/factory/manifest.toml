@@ -1,0 +1,23 @@
+[persona]
+name = "factory"
+description = "Builds new subject-matter-expert agents: clarifies the request, researches the domain, writes an approved spec, then scaffolds, validates, and exports a declarative persona."
+domain = "agent-factory"
+
+[prompt]
+file = "prompt.md"
+
+[task]
+template = "Build a new subject-matter-expert agent. The user's request: {subject}"
+
+[tools]
+builtins = ["web_fetch", "read_file", "glob", "update_plan", "ask_user"]
+custom = "tools:TOOLS"
+
+[output]
+schema_file = "output_schema.json"
+
+[workspace]
+subdirs = ["build", "exports"]
+
+[provider]
+model = "claude-sonnet-5"

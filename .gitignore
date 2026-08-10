@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+dist/
+build/
+*.egg-info/
+# factory/agent run workspaces (scratch, regenerated)
+runs/
+# per-session runtime state (fleet registry, sessions) — local, not shared
+.janus/

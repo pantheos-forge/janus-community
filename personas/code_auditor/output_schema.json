@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "A 2-4 sentence executive summary of the codebase's size, language mix, and overall risk posture."
+    },
+    "language_breakdown": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {"type": "string"},
+          "files": {"type": "integer", "minimum": 0},
+          "code_lines": {"type": "integer", "minimum": 0}
+        },
+        "required": ["language", "files", "code_lines"],
+        "additionalProperties": false
+      }
+    },
+    "findings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding": {"type": "string"},
+          "evidence": {"type": "string"}
+        },
+        "required": ["finding", "evidence"],
+        "additionalProperties": false
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "risk": {"type": "string"},
+          "evidence": {"type": "string"}
+        },
+        "required": ["risk", "evidence"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["summary", "language_breakdown", "findings", "risks"],
+  "additionalProperties": false
+}

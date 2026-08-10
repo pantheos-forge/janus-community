@@ -1,0 +1,537 @@
+/* Janus TUI Styles — generic dark theme
+ *
+ * Palette (keep in sync with theme.py):
+ *   Foundation:  Obsidian #0A0C10 | Gunmetal #161B22 | Dark Steel #1C2128 | Steel #2D333B
+ *   Accent:      Accent #E8913A | Accent Secondary #F5B84C | Glow #FFCF70
+ *   Functional:  Electric Blue #3B82F6 | Cyber Teal #14B8A6 | Plasma Violet #8B5CF6
+ *                Danger Red #EF4444 | Success Green #22C55E
+ *   Text:        Primary #E6EDF3 | Secondary #8B949E | Dim #484F58 | Bright #C9D1D9
+ */
+
+/* ============================================================================
+   Global Styles
+   ============================================================================ */
+
+Screen {
+    background: #0A0C10;
+    color: #E6EDF3;
+}
+
+/* ============================================================================
+   Splash Screen
+   ============================================================================ */
+
+#splash_screen {
+    height: 100%;
+    width: 100%;
+    background: #0A0C10;
+    content-align: center middle;
+    text-align: center;
+}
+
+#splash_content {
+    width: auto;
+    height: auto;
+    background: transparent;
+    text-align: center;
+    padding: 2;
+}
+
+/* ============================================================================
+   Main Layout
+   ============================================================================ */
+
+#main_container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #0A0C10;
+}
+
+#header {
+    height: 3;
+    background: #161B22;
+    border-bottom: solid #2D333B;
+    padding: 0 2;
+    layout: horizontal;
+    align: left middle;
+}
+
+#header_info {
+    width: 1fr;
+    content-align: left middle;
+}
+
+#header_spinner {
+    width: auto;
+    min-width: 0;
+    content-align: center middle;
+    padding: 0 1;
+}
+
+#header_timer {
+    width: auto;
+    min-width: 10;
+    content-align: right middle;
+    color: #F5B84C;
+    text-style: bold;
+}
+
+#content_area {
+    height: 1fr;
+    background: transparent;
+    padding: 1 2;
+}
+
+#status_bar {
+    height: 1;
+    background: #161B22;
+    border-top: solid #2D333B;
+    padding: 0 2;
+    content-align: left middle;
+}
+
+/* ============================================================================
+   Activity Feed
+   ============================================================================ */
+
+#activity_feed {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    scrollbar-background: #0A0C10;
+    scrollbar-color: #2D333B;
+    scrollbar-corner-color: #0A0C10;
+    scrollbar-size: 1 1;
+}
+
+#activity_content {
+    width: 100%;
+    background: transparent;
+    padding: 0;
+}
+
+.activity-item {
+    margin-bottom: 1;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+}
+
+.activity-timestamp {
+    color: #484F58;
+    text-style: dim;
+}
+
+.activity-message {
+    color: #8B949E;
+}
+
+.activity-status-active {
+    color: #E8913A;
+    text-style: bold;
+}
+
+.activity-status-success {
+    color: #22C55E;
+    text-style: bold;
+}
+
+.activity-status-error {
+    color: #EF4444;
+    text-style: bold;
+}
+
+/* ============================================================================
+   Tool Execution Blocks
+   ============================================================================ */
+
+.tool-block {
+    background: #1C2128;
+    border: round #242930;
+    border-left: thick #484F58;
+    padding: 1 2;
+    margin: 0 0 1 0;
+    width: 100%;
+}
+
+.tool-thinking {
+    border-left: thick #8B5CF6;
+}
+
+.tool-result {
+    border-left: thick #E8913A;
+}
+
+.tool-error {
+    border-left: thick #EF4444;
+    background: #1A0E0E;
+}
+
+.tool-warning {
+    border-left: thick #F5B84C;
+    background: #1A1508;
+}
+
+/* Tool status indicators */
+.tool-block.status-running {
+    border-left: thick #E8913A;
+}
+
+.tool-block.status-completed {
+    border-left: thick #22C55E;
+    background: #0F1218;
+}
+
+.tool-block.status-failed {
+    border-left: thick #EF4444;
+    background: #1A0E0E;
+}
+
+/* Tool content */
+.tool-header {
+    color: #E6EDF3;
+    text-style: bold;
+}
+
+.tool-command {
+    color: #22C55E;
+    text-style: none;
+}
+
+.tool-output {
+    color: #8B949E;
+    text-style: none;
+}
+
+/* ============================================================================
+   Status Messages
+   ============================================================================ */
+
+.status-agent-active {
+    color: #E8913A;
+    text-style: bold;
+}
+
+.status-agent-thinking {
+    color: #8B5CF6;
+    text-style: italic;
+}
+
+.status-agent-idle {
+    color: #484F58;
+    text-style: dim;
+}
+
+.status-icon-active {
+    color: #E8913A;
+}
+
+.status-icon-success {
+    color: #22C55E;
+}
+
+.status-icon-warning {
+    color: #F5B84C;
+}
+
+.status-icon-error {
+    color: #EF4444;
+}
+
+/* ============================================================================
+   Help Modal
+   ============================================================================ */
+
+HelpScreen {
+    align: center middle;
+    background: $background 80%;
+}
+
+#help_dialog {
+    grid-size: 1;
+    grid-gutter: 1;
+    grid-rows: auto;
+    padding: 2;
+    width: 60;
+    height: auto;
+    border: round #E8913A;
+    background: #161B22;
+}
+
+#help_title {
+    color: #FFCF70;
+    text-style: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#help_content {
+    color: #E6EDF3;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+.help-key {
+    color: #F5B84C;
+    text-style: bold;
+}
+
+.help-description {
+    color: #8B949E;
+}
+
+/* ============================================================================
+   Info Overlay Modal
+   ============================================================================ */
+
+InfoOverlay {
+    align: center middle;
+    background: $background 80%;
+}
+
+#info_dialog {
+    padding: 1 2;
+    width: 70;
+    max-height: 80%;
+    border: round #E8913A;
+    background: #161B22;
+}
+
+#info_title {
+    color: #FFCF70;
+    text-style: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#info_scroll {
+    height: auto;
+    max-height: 100%;
+}
+
+#info_body {
+    color: #E6EDF3;
+    width: 100%;
+}
+
+/* ============================================================================
+   Quit Confirmation Modal
+   ============================================================================ */
+
+QuitScreen {
+    align: center middle;
+    background: $background 80%;
+}
+
+#quit_dialog {
+    grid-size: 1;
+    grid-gutter: 1;
+    grid-rows: auto auto auto;
+    padding: 2;
+    width: 50;
+    height: auto;
+    border: round #F5B84C;
+    background: #161B22;
+}
+
+#quit_title {
+    color: #ffffff;
+    text-style: bold;
+    text-align: center;
+    width: 100%;
+}
+
+#quit_message {
+    color: #768390;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#quit_buttons {
+    grid-size: 2;
+    grid-gutter: 2;
+    grid-columns: 1fr 1fr;
+    width: 100%;
+    height: auto;
+}
+
+#quit_buttons Button {
+    height: 3;
+    min-height: 3;
+    text-style: bold;
+}
+
+#btn_quit_confirm {
+    background: #2A1818;
+    color: #ff6b6b;
+    border: solid #EF4444;
+}
+
+#btn_quit_confirm:hover, #btn_quit_confirm:focus {
+    background: #EF4444;
+    color: #ffffff;
+    border: solid #ff6b6b;
+}
+
+#btn_quit_cancel {
+    background: #161B22;
+    color: #C9D1D9;
+    border: solid #484F58;
+}
+
+#btn_quit_cancel:hover, #btn_quit_cancel:focus {
+    background: #E8913A;
+    color: #ffffff;
+    border: solid #FFCF70;
+}
+
+/* ============================================================================
+   Scrollbars
+   ============================================================================ */
+
+Vertical:focus-within > VerticalScroll {
+    scrollbar-color: #E8913A;
+}
+
+VerticalScroll:focus {
+    scrollbar-color: #E8913A;
+}
+
+/* ============================================================================
+   Placeholders & Loading States
+   ============================================================================ */
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+    content-align: center middle;
+    text-align: center;
+    color: #484F58;
+    text-style: italic;
+}
+
+.loading {
+    color: #E8913A;
+    text-style: italic;
+}
+
+.loading-dots {
+    color: #F5B84C;
+}
+
+/* ============================================================================
+   Accent & Semantic Colors
+   ============================================================================ */
+
+.accent-primary {
+    color: #E8913A;
+}
+
+.accent-secondary {
+    color: #F5B84C;
+}
+
+.text-success {
+    color: #22C55E;
+}
+
+.text-warning {
+    color: #F5B84C;
+}
+
+.text-error {
+    color: #EF4444;
+}
+
+.text-dim {
+    color: #484F58;
+}
+
+.text-muted {
+    color: #8B949E;
+}
+
+.text-primary {
+    color: #E6EDF3;
+}
+
+/* ============================================================================
+   Command Input
+   ============================================================================ */
+
+#user_input {
+    height: 3;
+    background: #161B22;
+    border: round #484F58;
+    padding: 0 1;
+    margin: 0 2 0 2;
+}
+
+#user_input:focus {
+    border: round #E8913A;
+    background: #1C2128;
+}
+
+#user_input:disabled {
+    border: round #2D333B;
+    color: #484F58;
+    background: #0F1218;
+}
+
+/* ============================================================================
+   Question Panel
+   ============================================================================ */
+
+.question-panel {
+    border: round #F5B84C;
+    padding: 0 1;
+    height: auto;
+    max-height: 70%;
+    margin: 0 2;
+    background: #161B22;
+}
+
+#question_scroll {
+    height: auto;
+    max-height: 16;
+}
+
+#question_text {
+    color: #E6EDF3;
+    padding: 0 0 1 0;
+}
+
+#question_chips {
+    height: auto;
+}
+
+#question_chips Button {
+    margin-right: 1;
+    min-width: 8;
+}
+
+/* ============================================================================
+   Build Panel
+   ============================================================================ */
+
+#build_panel {
+    width: 30;
+    border-left: solid #2D333B;
+    padding: 0 1;
+}
+
+#main_row {
+    height: 1fr;
+}
+
+.session-view {
+    height: 1fr;
+}

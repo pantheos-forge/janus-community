@@ -1,0 +1,25 @@
+[persona]
+name = "market_research"
+description = "Researches a market or topic and produces a structured, sourced brief."
+domain = "market-research"
+
+[prompt]
+file = "prompt.md"
+
+[task]
+template = "Research the following market/topic and produce a structured brief: {subject}"
+
+[tools]
+builtins = ["web_fetch", "write_file", "read_file", "update_plan"]
+
+[output]
+schema_file = "output_schema.json"
+
+[workspace]
+subdirs = ["notes", "sources"]
+
+[provider]
+model = "claude-sonnet-5"
+
+[validation]
+rubric_file = "rubric.toml"

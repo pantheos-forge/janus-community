@@ -1,0 +1,18 @@
+[install]
+apt = ["ripgrep", "git"]
+go  = ["github.com/boyter/scc/v3@latest"]
+
+[[tool]]
+name = "scc"
+description = "code counter — languages, files, lines, complexity (use --format json)"
+usage = "scc --format json <dir>"
+
+[[tool]]
+name = "rg"
+description = "ripgrep — fast recursive content search"
+usage = "rg -n --stats 'TODO|FIXME|password|secret' <dir>"
+
+[[tool]]
+name = "git"
+description = "clone a target repo when the subject is a URL"
+usage = "git clone --depth 1 <url> target"

@@ -1,0 +1,18 @@
+tasks = [
+  "the market for at-home coffee equipment in the United States",
+  "the electric cargo bike market in Western Europe",
+]
+pass_threshold = 0.7
+mode = "all"
+
+[[criteria]]
+name = "coverage"
+description = "The brief covers the key aspects of the market/topic: an executive summary, concrete findings, the competitive landscape, and material risks and opportunities."
+
+[[criteria]]
+name = "sourcing"
+description = "Key findings are backed by specific, credible sources rather than unsupported assertions; numbers and trends are attributed."
+
+[[criteria]]
+name = "structure"
+description = "The brief is well-organized, internally consistent, and clearly written."

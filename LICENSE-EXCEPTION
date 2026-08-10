@@ -1,0 +1,25 @@
+Janus Persona Exception to the GNU AGPL, version 1.0
+
+Additional permission under GNU AGPL version 3 section 7.
+
+As a special exception, Pantheos Forge, the copyright holder of the Janus
+runtime (the "Runtime"), grants you additional permission to convey and/or
+operate a Persona and its Outputs WITHOUT applying the terms of the GNU Affero
+General Public License to that Persona or those Outputs.
+
+Definitions:
+- "Persona" means a directory of declarative agent-definition files you author
+  for use with the Runtime, comprising its manifest (manifest.toml), prompt
+  (prompt.md), output schema (output_schema.json), rubric (rubric.toml),
+  optional tool-definition module (tools.py), optional container definition
+  (container.toml), and optional banner (banner.txt).
+- "Outputs" means the data an agent produces when executed.
+
+Scope and limits:
+- This exception applies solely to a Persona and its Outputs.
+- It does NOT extend to the Runtime. Any modified Runtime you convey or make
+  available to users over a network remains subject to the AGPL in full,
+  including section 13 (the network-use source-disclosure requirement).
+- If you modify the Runtime, you may (but need not) remove this exception from
+  your modified version. If you do not wish to rely on this exception for a
+  given work, omit it, and the AGPL applies unmodified.
