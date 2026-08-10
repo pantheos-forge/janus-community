@@ -132,6 +132,14 @@ Factory-built agents land in the fleet home (`~/janus-agents/`, override with
   that were exported before the fix landed (each agent carries its own runtime
   copy).
 
+Every agent you build lands in the fleet, where you can run, re-validate,
+improve, containerize, rename, or retire it — and see at a glance whether each
+one is running the current runtime and how it last scored:
+
+<p align="center">
+  <img src="assets/fleet-dashboard.png" alt="The Janus fleet dashboard: a table of built agents with their domain, runtime freshness, and last validation score, above a row of actions — run, validate, improve, sync, containerize, rename, remove, details, adopt" width="900">
+</p>
+
 ## Development
 
 ```bash
