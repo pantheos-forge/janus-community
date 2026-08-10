@@ -11,6 +11,13 @@ history, see the git log and the design specs under
 
 ### Fixed
 
+- **`janus fleet remove --purge` now works on containerized agents** — a
+  containerized agent's `runs/` holds root-owned files (the container runs as
+  root and writes into the `./runs` bind mount), so the host user could not
+  delete them: `--purge` deregistered the agent but silently left its directory
+  on disk. It now falls back to a root-capable delete inside a container.
+  Without Docker it degrades to the previous behaviour rather than failing.
+
 - **Containerized agents now read `.env`** — a container run built its
   environment from the process environment only, so a provider configured in
   `.env` (the setup path the README documents) never reached the container and
