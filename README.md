@@ -7,6 +7,8 @@ language. You tell it what expert agent you want; it interviews you, builds the
 agent, tests that the agent actually works, and hands you a self-contained,
 runnable repo.
 
+Built and maintained by **[Pantheos Forge](https://pantheosforge.com)**.
+
 <p align="center">
   <img src="assets/splash.png" alt="The Janus TUI splash screen: a braille-rendered janiform coin above the Janus wordmark" width="700">
 </p>
@@ -184,10 +186,11 @@ terms we agree on — no obligation to open your modifications.
 
 **→ Talk to us:** [contact@pantheosforge.com](mailto:contact@pantheosforge.com)
 
-Pantheos Forge also builds and operates **production expert agents** on this
-exact engine — including **Apophis**, our security agent — and offers
-agent-development consulting. If you'd rather have the expert built for you than
-build it yourself, [get in touch](mailto:contact@pantheosforge.com).
+[Pantheos Forge](https://pantheosforge.com) also builds and operates
+**production expert agents** on this exact engine — including **Apophis**, our
+security agent — and offers agent-development consulting. If you'd rather have
+the expert built for you than build it yourself,
+[get in touch](mailto:contact@pantheosforge.com).
 
 ---
 
